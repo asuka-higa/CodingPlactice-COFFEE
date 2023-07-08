@@ -76,7 +76,6 @@ html {
 }
 
 .section-h3 {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 80px;
@@ -170,40 +169,43 @@ dt {
   margin: 0 auto;
   display: block;
   position: relative;
-  /*******************
-  　上下の線用のmixin
-  ********************/
-  /*******************
-          上の線
-  ********************/
-  /*******************
-          下の線
-  ********************/
-  /*******************
-    上下の線　ホバー時
-  ********************/
 }
 .rm-button::before {
+  /*******************
+  　  上下の線用のmixin
+    ********************/
   position: absolute;
   content: "";
   width: 30px;
   height: 2px;
   background-color: #E13636;
   transition: all 0.3s ease;
+  /*******************
+    上の線用スタイル
+  ********************/
   top: 0;
   left: 0;
 }
 .rm-button::after {
+  /*******************
+  　  上下の線用のmixin
+    ********************/
   position: absolute;
   content: "";
   width: 30px;
   height: 2px;
   background-color: #E13636;
   transition: all 0.3s ease;
+  /*******************
+    下の線用スタイル
+  ********************/
   bottom: 0;
   right: 0;
 }
 .rm-button:hover::before, .rm-button:hover::after {
+  /******************************
+    上下の線　ホバー時用スタイル
+  *******************************/
   width: 160px;
 }
 .rm-button .rm-button-span {
@@ -211,41 +213,44 @@ dt {
   width: 100%;
   position: relative;
   text-align: center;
+}
+.rm-button .rm-button-span::before {
   /*******************
   　  左右の線用のmixin
     ********************/
-  /*******************
-        左の線
-  ********************/
-  /*******************
-        右の線
-  ********************/
-  /*******************
-    左右の線　ホバー時
-  ********************/
-}
-.rm-button .rm-button-span::before {
   position: absolute;
   content: "";
   width: 2px;
   height: 25px;
   background-color: #E13636;
   transition: all 0.3s ease;
+  /*******************
+    左の線用スタイル
+  ********************/
   bottom: 0;
   top: 0;
   left: 0;
 }
 .rm-button .rm-button-span::after {
+  /*******************
+  　  左右の線用のmixin
+    ********************/
   position: absolute;
   content: "";
   width: 2px;
   height: 25px;
   background-color: #E13636;
   transition: all 0.3s ease;
+  /*******************
+    右の線スタイル
+  ********************/
   bottom: 0;
   right: 0;
 }
 .rm-button .rm-button-span:hover::before, .rm-button .rm-button-span:hover::after {
+  /******************************
+    左右の線　ホバー時用スタイル
+  *******************************/
   height: 48px;
 }
 
@@ -279,7 +284,7 @@ dt {
   height: 24px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   /****************
     main 共通
   ****************/
@@ -337,11 +342,11 @@ dt {
       ABOUT
   ****************/
   .about-column-left,
-.about-column-right {
+  .about-column-right {
     padding: 0;
   }
   .about-column-left .about-text,
-.about-column-right .about-text {
+  .about-column-right .about-text {
     font-size: 0.875rem;
     line-height: 29px;
     margin-bottom: 16px;
@@ -353,9 +358,8 @@ dt {
 /*****************************************
   h1のみ画面の幅に合わせて文字サイズ縮小
 ******************************************/
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .header .header-h1 {
     font-size: 22vw;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
