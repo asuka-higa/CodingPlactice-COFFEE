@@ -261,10 +261,13 @@ dt {
   background-image: url(../img/location.jpg);
 }
 
+.location .container {
+  display: block;
+  padding: 0 16px;
+}
 .location .map {
   display: block;
   width: 100%;
-  max-width: 1000px;
   height: 400px;
   filter: grayscale(100%);
   margin: 0 auto 30px;
