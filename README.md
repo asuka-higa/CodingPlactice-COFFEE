@@ -3,5 +3,6 @@
 
 テスト
 テスト追加
+テスト追加３
 
 参考URL:https://code-step.com/store-menu/
